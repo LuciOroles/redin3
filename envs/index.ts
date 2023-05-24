@@ -4,7 +4,8 @@ dotenv.config();
 export default function getEnvValues() {
     return {
         props: {
-            URI: process.env.MONGO_URI
+            URI: process.env.MONGO_URI,
+            PRIVATE_KEY: process.env.PRIVATE_KEY
         }
     }
 }
