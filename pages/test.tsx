@@ -1,20 +1,15 @@
+import getEnvValues from "../envs";
 
-export default function Business({data}: {data: {URI: string}}) { 
+
+export default function Business({URI}: {URI: string }) { 
   return (
       <div>
-        Business Page {data.URI}
+        Business Page {URI}
       </div>
     );
   }
+
+
+  export  const getStaticProps = getEnvValues;
   
-  export async function getServerSideProps() {
-    
-    return {
-      props: {
-        data: {
-          URI: process.env.MONGO_URI
-        }
-      }
-    }
-  }
   
